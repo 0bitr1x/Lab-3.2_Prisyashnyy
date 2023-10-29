@@ -9,6 +9,8 @@
 
 
 // решение 1
+try
+{
 Console.WriteLine("Введите числа(для конца работы введите 0): ");
 int num1 = 0; // основное число
 int n = 0; // запоминание предедыщего числа для сравнения
@@ -31,10 +33,15 @@ do
     }
 } while (num1 != 0);
 Console.WriteLine(sum);
+catch (Exception ex)
+{
+Console.WriteLine(ex.Message);
+}
 
 
 // решение 2
-
+try
+{
 int sum = 0;
 int num;
 Console.WriteLine("Введите числа(для конца работы введите 0): ");
@@ -53,3 +60,7 @@ while (true)
 }
 
 Console.WriteLine("Сумма положительных чисел: " + sum);
+catch (Exception ex)
+{
+Console.WriteLine(ex.Message);
+}
