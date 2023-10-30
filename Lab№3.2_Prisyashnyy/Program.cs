@@ -55,6 +55,7 @@ try
     }
 
     Console.WriteLine("Сумма положительных чисел: " + sum);
+    }
     catch (Exception ex)
     {
         Console.WriteLine(ex.Message);
