@@ -16,17 +16,18 @@ int n = 0; // запоминание предедыщего числа для с
 int sum = 0; // сумма чисел
 do
 {
-    while(num1 == 0) num1 = int.Parse(Console.ReadLine()); // взятие первого числа для дальнейшего сравнения 
+    if (num1 == 0) num1 = int.Parse(Console.ReadLine()); // взятие первого числа для дальнейшего сравнения 
     n = num1; 
     num1 = int.Parse(Console.ReadLine());
     if (num1 == (n + 1))
     {
-        while (sum == 0) sum = n; // после сравнения через if сумме присваивается первое число для дальнейшего суммирования последовательности 
+        if (sum == 0) sum = n; // после сравнения через if сумме присваивается первое число для дальнейшего суммирования последовательности 
         sum += num1;
     }
     else if (num1 == 0) break;
 } while (num1 != 0);
 Console.WriteLine(sum);
+}
 catch (Exception ex)
 {
     Console.WriteLine(ex.Message);
